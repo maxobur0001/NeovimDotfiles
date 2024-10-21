@@ -94,6 +94,7 @@ return {
 					workspace = {
 						-- make language server aware of runtime files
 						library = {
+							[vim.fn.stdpath("config") .. "/lua/maxobur0001/luals/glua"] = true,
 							[vim.fn.expand("$VIMRUNTIME/lua")] = true,
 							[vim.fn.stdpath("config") .. "/lua"] = true,
 						},
