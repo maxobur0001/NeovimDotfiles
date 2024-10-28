@@ -22,7 +22,5 @@ return {
 				separator_style = "slant",
 			},
 		})
-		vim.keymap.set("n", "<C-L>", "<cmd>BufferLineCycleNext<CR>")
-		vim.keymap.set("n", "<C-H>", "<cmd>BufferLineCyclePrev<CR>")
 	end,
 }

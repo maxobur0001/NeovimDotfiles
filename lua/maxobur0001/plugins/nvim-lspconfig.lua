@@ -61,7 +61,7 @@ return {
 			)
 			vim.keymap.set(
 				"n",
-				"<leader>d",
+				"<C-d>",
 				vim.diagnostic.open_float,
 				{ buffer = bufnr, desc = "Show diagnostics for line" }
 			)

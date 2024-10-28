@@ -1,54 +1,52 @@
 return {
-  "nvim-lualine/lualine.nvim",
-  config = function()
-    local colors = {
-      default_background = "#313244",
-      default_text = "#cdd6f4",
-      mode_background = "#89b4fa",
-      mode_text = "#1e1e2e"
-    }
-    local theme = {
-      normal = {
-        a = { bg = colors.mode_background, fg = colors.mode_text },
-        b = { bg = colors.default_background, fg = colors.default_text },
-        c = { fg = colors.default_text, bg = colors.default_background },
-        z = { fg = colors.default_text, bg = colors.default_background },
-      },
-    }
+	"nvim-lualine/lualine.nvim",
+	config = function()
+		local colors = {
+			bg = "#313244",
+			fg = "#cdd6f4",
+			alt_bg = "#89b4fa",
+			alt_fg = "#1e1e2e",
+		}
+		local theme = {
+			normal = {
+				a = { bg = colors.alt_bg, fg = colors.alt_fg },
+				b = { bg = colors.bg, fg = colors.fg },
+				c = { fg = colors.fg, bg = colors.default_background },
+				z = { fg = colors.alt_fg, bg = colors.alt_bg },
+			},
+		}
 
-    require("lualine").setup({
-      options = {
-        theme = theme,
-      },
-      sections = {
-        lualine_a = {
-          {
-            "mode",
-            separator = { right = "" },
-            padding = {
-              left = 3,
-              right = 3,
-            },
-          },
-        },
-        lualine_b = {
-          { 
-            "filename", 
-            file_status = true, 
-            path = 3,
-            symbols = {
-              modified = "•",
-              readonly = "",
-              unnamed = "unnamed.",
-              newfile = "new file."
-            }
-          },
-        },
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {},
-      },
-    })
-  end,
+		require("lualine").setup({
+			options = {
+				theme = theme,
+			},
+			sections = {
+				lualine_a = {
+					{
+						"mode",
+						separator = { right = "" },
+						padding = {
+							left = 1,
+							right = 1,
+						},
+					},
+				},
+				lualine_b = {},
+				lualine_c = {},
+				lualine_x = {},
+				lualine_y = {},
+				lualine_z = {
+					{
+						"datetime",
+						style = "%H:%M:%S",
+						separator = { left = "" },
+						padding = {
+							left = 1,
+							right = 1,
+						},
+					},
+				},
+			},
+		})
+	end,
 }
