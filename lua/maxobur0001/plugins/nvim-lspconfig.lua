@@ -61,11 +61,12 @@ return {
 			)
 			vim.keymap.set(
 				"n",
-				"<C-d>",
+				"<leader>d",
 				vim.diagnostic.open_float,
 				{ buffer = bufnr, desc = "Show diagnostics for line" }
 			)
 			-- vim.keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", {buffer = bufnr, desc = 'Show definition, references'})
+			--
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr, desc = "Go to definition" })
 		end
 
@@ -74,6 +75,7 @@ return {
 			["Hint"] = "󰋼",
 			["Info"] = "",
 			["Error"] = "",
+
 			["Warn"] = "",
 		}
 		for type, icon in pairs(signs) do
