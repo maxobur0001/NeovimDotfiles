@@ -44,8 +44,10 @@ vim.opt.expandtab = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
 
-vim.opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+vim.opt.langmap =
+	"ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 
 vim.opt.hidden = true
 vim.opt.gdefault = true
+vim.opt.cmdheight = 0
 vim.o.lazyredraw = true

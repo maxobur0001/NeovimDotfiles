@@ -1,9 +1,8 @@
-return { 
-	"catppuccin/nvim",
-	name = "catppuccin",
-	priority = 1000,
+return {
+	"rose-pine/neovim",
+	name = "rose-pine",
 	config = function()
-	  require("catppuccin").setup({})
-    vim.cmd("colorscheme catppuccin")
-  end
+		vim.cmd("colorscheme rose-pine-moon")
+		vim.cmd("hi NonText guifg=bg")
+	end,
 }
