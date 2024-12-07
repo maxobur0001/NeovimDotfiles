@@ -2,10 +2,10 @@ return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
 		local colors = {
-			bg = "#232136",
-			fg = "#e0def4",
-			alt_bg = "#c4a7e7",
-			alt_fg = "#232136",
+			bg = "#1e1e2e",
+			fg = "#cdd6f4",
+			alt_bg = "#89b4fa",
+			alt_fg = "#1e1e2e",
 		}
 		local theme = {
 			normal = {

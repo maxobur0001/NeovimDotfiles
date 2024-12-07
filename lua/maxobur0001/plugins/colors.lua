@@ -1,8 +1,8 @@
 return {
-	"rose-pine/neovim",
-	name = "rose-pine",
+	"catppuccin/nvim",
+	name = "catppuccin",
 	config = function()
-		vim.cmd("colorscheme rose-pine-moon")
+		vim.cmd("colorscheme catppuccin-mocha")
 		vim.cmd("hi NonText guifg=bg")
 	end,
 }
