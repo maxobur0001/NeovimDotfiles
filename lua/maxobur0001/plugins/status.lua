@@ -20,7 +20,7 @@ return {
 		require("lualine").setup({
 			options = {
 				theme = theme,
-				disabled_filetypes = { "packer", "NvimTree" },
+				disabled_filetypes = { "packer", "neo-tree", "trouble" },
 			},
 			sections = {
 				lualine_a = {},
