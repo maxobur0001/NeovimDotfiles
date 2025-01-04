@@ -32,7 +32,7 @@ return {
 			},
 			commands = {},
 			window = {
-				position = "left",
+				position = "float",
 				width = 40,
 			},
 			nesting_rules = {},
@@ -41,6 +41,22 @@ return {
 					visible = true,
 					hide_dotfiles = false,
 					hide_gitignored = true,
+				},
+			},
+			event_handlers = {
+				{
+					event = "neo_tree_buffer_enter",
+					handler = function()
+						-- This effectively hides the cursor
+						vim.cmd("highlight! Cursor blend=100")
+					end,
+				},
+				{
+					event = "neo_tree_buffer_leave",
+					handler = function()
+						-- Make this whatever your current Cursor highlight group is.
+						vim.cmd("highlight! Cursor guibg=#5f87af blend=0")
+					end,
 				},
 			},
 		})

@@ -15,3 +15,8 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")
+
+-- vim.keymap.set({ "n", "v" }, "<Left>", "<Nop>")
+-- vim.keymap.set({ "n", "v" }, "<Down>", "<Nop>")
+-- vim.keymap.set({ "n", "v" }, "<Up>", "<Nop>")
+-- vim.keymap.set({ "n", "v" }, "<Right>", "<Nop>")
