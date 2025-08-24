@@ -3,6 +3,7 @@ vim.g.maplocalleader = " "
 
 vim.o.hlsearch = true
 vim.wo.number = true
+vim.opt.relativenumber = true
 
 vim.o.mouse = "a"
 vim.o.clipboard = "unnamedplus"
@@ -51,3 +52,4 @@ vim.opt.hidden = true
 vim.opt.gdefault = true
 vim.opt.cmdheight = 0
 vim.o.lazyredraw = true
+vim.filetype.match({ buf = 0 })

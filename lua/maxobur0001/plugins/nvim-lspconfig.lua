@@ -90,14 +90,16 @@ return {
 			on_attach = on_attach,
 			settings = { -- custom settings for lua
 				Lua = {
-					-- make the language server recognize "vim" global
-					diagnostics = {
-						globals = { "vim" },
-					},
+          diagnostics = {
+            globals = {
+              "vim",
+            },
+          },
 					workspace = {
 						-- make language server aware of runtime files
 						library = {
 							[vim.fn.stdpath("config") .. "/lua/maxobur0001/luals/glua"] = true,
+							[vim.fn.stdpath("config") .. "/lua/maxobur0001/luals/starfall"] = true,
 							[vim.fn.expand("$VIMRUNTIME/lua")] = true,
 							[vim.fn.stdpath("config") .. "/lua"] = true,
 						},
@@ -126,6 +128,7 @@ return {
 				},
 			},
 		})
+		lspconfig["clangd"].setup({})
 		lspconfig["rust_analyzer"].setup({})
 		require("rust-tools").setup({
 			tools = {
@@ -170,5 +173,7 @@ return {
 				},
 			},
 		})
+		lspconfig["gdscript"].setup({})
+		lspconfig["gdshader_lsp"].setup({})
 	end,
 }
