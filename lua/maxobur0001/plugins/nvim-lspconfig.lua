@@ -71,10 +71,12 @@ return {
             },
           },
 					workspace = {
+            checkThirdParty = false,
 						library = {
-							vim.fn.stdpath("config") .. "/lua/maxobur0001/luals/glua/",
-							vim.fn.stdpath("config") .. "/lua/maxobur0001/luals/starfall/",
-				      vim.env.VIMRUNTIME
+              -- Just my files, don't touch
+              "/home/maxobur0001/.local/share/Steam/steamapps/common/GarrysMod/garrysmod/data/starfall/astricunion/libs",
+							-- vim.fn.stdpath("config") .. "/lua/maxobur0001/luals/glua/",
+							vim.fn.stdpath("config") .. "/lua/maxobur0001/luals/starfall/"
 						}
 					},
 				},
